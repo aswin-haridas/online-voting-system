@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class VotingScreen extends StatelessWidget {
 
@@ -20,6 +21,9 @@ class VotingScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Cantidates'),
+        actions: [
+          IconButton(onPressed: (){ Navigator.pushNamed(context, '/results');}, icon: Icon(Icons.bar_chart),)
+        ],
       ),
       body: ListView.builder(
           itemBuilder: (context, index) {
@@ -33,6 +37,7 @@ class VotingScreen extends StatelessWidget {
                 ));
           },
           itemCount: candidates.length),
+      
     );
   }
 

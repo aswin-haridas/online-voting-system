@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => AuthenticationScreen(),
         '/voting': (context) => VotingScreen(),
-        '/results': (context) => ResultsScreen(),
+        '/results': (context) => ResultScreen(),
         '/profile': (context) => ProfileScreen(),
       },
     );
