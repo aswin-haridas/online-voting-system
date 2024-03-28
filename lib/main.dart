@@ -12,12 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Online Voting App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: '/profile',
+      initialRoute: '/',
       routes: {
         '/': (context) => AuthenticationScreen(),
         '/voting': (context) => VotingScreen(),
