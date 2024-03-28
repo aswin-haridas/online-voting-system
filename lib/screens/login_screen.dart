@@ -14,16 +14,16 @@ class AuthenticationScreen extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                // Navigate to the Login screen
-                Navigator.pushNamed(context, '/login');
+                // validate user credentials and navigate to the voting screen
+                Navigator.pushNamed(context, '/voting');
               },
               child: Text('Login'),
             ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Navigate to the Sign Up screen
-                Navigator.pushNamed(context, '/signup');
+                // validate user credentials and navigate to the voting screen
+                Navigator.pushNamed(context, '/voting');
               },
               child: Text('Sign Up'),
             ),

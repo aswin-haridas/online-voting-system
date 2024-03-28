@@ -1,35 +1,68 @@
 import 'package:flutter/material.dart';
 
 class VotingScreen extends StatelessWidget {
+
+  final List<String> candidates = [
+    'Candidate 1',
+    'Candidate 2',
+    'Candidate 3',
+    'Candidate 4',
+    'Candidate 5',
+    'Candidate 6',
+    'Candidate 7',
+    'Candidate 8',
+    'Candidate 9',
+    'Candidate 10',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Voting'),
+        title: Text('Cantidates'),
       ),
-      body: ListView(
-        children: [
-          ListTile(
-            title: Text('Candidate 1'),
-            onTap: () {
-              // Handle candidate selection
-            },
-          ),
-          ListTile(
-            title: Text('Candidate 2'),
-            onTap: () {
-              // Handle candidate selection
-            },
-          ),
-          // Add more ListTile widgets for other candidates and issues
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Submit ballot
-        },
-        child: Icon(Icons.check),
-      ),
+      body: ListView.builder(
+          itemBuilder: (context, index) {
+            return ListTile(
+                title: Text(candidates[index]),
+                trailing: ElevatedButton(
+                  onPressed: () {
+                    _voteForCandidate(context, candidates[index]);
+                  },
+                  child: Text('Vote'),
+                ));
+          },
+          itemCount: candidates.length),
+    );
+  }
+
+  
+  void _voteForCandidate(BuildContext context, String candidateName) {
+    // Implement your voting logic here
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Vote Confirmation'),
+          content: Text('Are you sure you want to vote for $candidateName?'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                // Perform vote action
+                // For demonstration, just close the dialog
+                Navigator.of(context).pop();
+              },
+              child: Text('Yes'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text('No'),
+            ),
+          ],
+        );
+      },
     );
   }
 }
