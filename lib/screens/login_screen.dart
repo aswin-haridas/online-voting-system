@@ -1,4 +1,8 @@
-// ignore_for_file: prefer_const_constructors
+//notes
+
+// create inputs for username and password and include sign up using google also 
+// create signup_screen similar to this
+
 
 import 'package:flutter/material.dart';
 

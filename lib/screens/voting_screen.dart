@@ -1,3 +1,13 @@
+// notes for Sachin 
+
+// add a save button below the Cantidates list 
+
+// user can select multiple candidates i think so convert the vote button to a checkbox kinda thingy 
+
+// on submit we have to save the candidates the user voted in the database
+
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
