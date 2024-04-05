@@ -1,8 +1,5 @@
-//notes
-
 // create inputs for username and password and include sign up using google also 
 // create signup_screen similar to this
-
 
 import 'package:flutter/material.dart';
 
@@ -23,7 +20,7 @@ class AuthenticationScreen extends StatelessWidget {
               },
               child: Text('Login'),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 // validate user credentials and navigate to the voting screen
