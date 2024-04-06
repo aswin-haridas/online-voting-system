@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: '/results',
+      initialRoute: '/',
       routes: {
         '/': (context) => const AuthenticationScreen(),
         '/voting': (context) =>  VotingScreen(),
